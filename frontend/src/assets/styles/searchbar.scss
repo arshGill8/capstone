@@ -1,0 +1,62 @@
+@import './variables.scss';
+
+.search{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem;
+    @media (min-width:$desktop) {
+        margin-left: 27rem;
+    };
+    @media (min-width:$desktopL) {
+        margin-left: 45rem;
+    };
+   
+    &__title{
+        margin: 0;
+        color: $green;
+        margin-right: 1rem;
+        font-size: 2rem;
+        font-weight: bold;
+        padding-top: 0.4rem;
+    }
+    &__top{
+        margin: 1rem 0;
+        display: flex;      
+    }
+    
+    &__input{
+        @include greeninput;
+        margin-left: 1.8%;
+        @media (min-width:$tablet) {
+            margin-left: 0.8%;
+        }
+        &--bottom{
+        @include greeninput;
+        }
+    }
+    &__button{
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        background-color: #161603;
+        color: #f1f37a;
+        border-radius: 4px;
+        height: 50px;
+        font-size: 1rem;
+        font-weight: 700;
+        border: none;
+    }
+    &__map{
+        display: none;
+        position: absolute;
+        top: 12rem;
+        left: 3rem;
+        width: 30rem;
+        height: 18rem;
+        border: none;
+        overflow: hidden;
+        @media (min-width: $desktopL ) {
+            display: block;
+        }
+    }
+}
